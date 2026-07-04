@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>inLie — Privacy Policy</title>
+  <meta name="description" content="How inLie handles your data: no server, your Claude API key stays on your device, nothing tracked." />
+  <style>
+    :root {
+      --bg:#070b14; --fg:#e8edf7; --muted:#9aa7bd; --faint:#7286aa;
+      --line:rgba(148,163,184,.16); --elev:#0d1421; --accent:#10b3a3;
+      --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      --serif:Georgia,"Times New Roman",serif; --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+    }
+    * { box-sizing:border-box; margin:0; }
+    body { font-family:var(--sans); background:var(--bg); color:var(--fg); line-height:1.65; font-size:15px; -webkit-font-smoothing:antialiased; }
+    main { max-width:640px; margin:0 auto; padding:56px 24px 80px; }
+    .wm { font-size:20px; font-weight:700; letter-spacing:-.02em; margin-bottom:40px; }
+    .wm .in { color:var(--faint); font-weight:600; }
+    h1 { font-family:var(--serif); font-size:32px; font-weight:600; line-height:1.25; }
+    .date { font-family:var(--mono); font-size:12px; color:var(--faint); margin-top:10px; }
+    h2 { font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); margin:40px 0 12px; }
+    p, li { color:var(--muted); }
+    strong { color:var(--fg); font-weight:600; }
+    ul { padding-left:20px; display:grid; gap:8px; }
+    table { width:100%; border-collapse:collapse; margin-top:8px; font-size:14px; }
+    th, td { text-align:left; padding:10px 12px 10px 0; border-bottom:1px solid var(--line); vertical-align:top; color:var(--muted); }
+    th { color:var(--faint); font-size:11px; text-transform:uppercase; letter-spacing:.08em; }
+    td:first-child { color:var(--fg); white-space:nowrap; }
+    a { color:var(--accent); text-decoration:none; font-weight:600; }
+    a:hover { text-decoration:underline; }
+    .card { border:1px solid var(--line); border-radius:12px; padding:18px 20px; margin-top:24px; background:var(--elev); }
+    .card p + p { margin-top:8px; }
+    @media (max-width:520px){ table, thead, tbody, tr, th, td { display:block; } th { border:0; padding-bottom:2px; } td { border:0; padding:0 0 2px; } tr { border-bottom:1px solid var(--line); padding:10px 0; } td:first-child { font-weight:600; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="wm"><span class="in">in</span>Lie</div>
+    <h1>Privacy Policy</h1>
+    <div class="date">Last updated: 2026-07-04</div>
+
+    <div class="card">
+      <p><strong>The short version:</strong> inLie has no server that stores your data — it runs in your browser.</p>
+      <p>Your Claude (Anthropic) API key never leaves your device except to go straight to Anthropic. The developer never receives, transmits, or stores your key.</p>
+      <p>inLie only acts on YouTube video pages, and only when you press Watch or Analyse.</p>
+    </div>
+
+    <h2>What is processed, and where it goes</h2>
+    <table>
+      <tr><th>Data</th><th>Where it's stored / sent</th><th>Why</th></tr>
+      <tr><td>Your Claude API key</td><td>Your device only (browser extension storage); sent directly to api.anthropic.com over HTTPS on each request</td><td>To run the analysis on your own Anthropic account</td></tr>
+      <tr><td>The video's transcript</td><td>Sent to Anthropic (with your key) and fetched via inLie's transcript service</td><td>To detect manipulation tactics in the speech</td></tr>
+      <tr><td>The YouTube video ID</td><td>Sent to the transcript service</td><td>To fetch the transcript for the current video</td></tr>
+      <tr><td>Detection settings</td><td>Your device only</td><td>To remember your preferences</td></tr>
+      <tr><td>Analysis history</td><td>Your device only — findings, verdict, and cost for your 10 most recently analysed videos; never transmitted anywhere</td><td>So reopening a video restores its ledger and never re-bills analysed speech</td></tr>
+    </table>
+
+    <h2>What is never collected</h2>
+    <ul>
+      <li>No account, no login, no analytics, no tracking, no advertising identifiers.</li>
+      <li>No data is sold or shared beyond the two processors named below.</li>
+      <li>Nothing is retained server-side by inLie. The only retained data is the on-device history above — yours to clear.</li>
+    </ul>
+
+    <h2>Third-party processing</h2>
+    <ul>
+      <li><strong>Anthropic (Claude API).</strong> When you analyse, transcript text goes to Anthropic, authenticated with your own key, governed by Anthropic's policies and your agreement with them.</li>
+      <li><strong>Transcript service (Cloudflare Worker).</strong> Receives only the video ID, so the transcript-provider key isn't shipped in the extension.</li>
+    </ul>
+
+    <h2>Your controls</h2>
+    <ul>
+      <li>Remove your API key any time in Settings — "Remove key &amp; reset" also wipes the analysis history.</li>
+      <li>Uninstalling inLie clears all locally stored data, including the history.</li>
+      <li>inLie runs only on youtube.com, and analyses only when you explicitly start it.</li>
+    </ul>
+
+    <h2>Children's privacy</h2>
+    <p>inLie is not directed at children and does not knowingly collect any data from anyone. It analyses public political video content; it has no accounts, profiles, or age-gated features.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the updated version ships with the extension update and the date above changes. Material changes will be called out in the extension's changelog.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy: email the developer at <a href="mailto:igolovac629@gmail.com">igolovac629@gmail.com</a> (Ivan Holovach).</p>
+  </main>
+</body>
+</html>
